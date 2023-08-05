@@ -6,3 +6,12 @@ opentrends-service/.factorypath
 opentrends-service/.settings/org.eclipse.jdt.core.prefs
 opentrends-service/.settings/org.eclipse.m2e.core.prefs
 opentrends-service/.settings/org.springframework.ide.eclipse.prefs
+
+cat ~/.gitignore
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.classes

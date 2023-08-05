@@ -10,4 +10,5 @@ public class OpentrendsServiceApplication {
 		SpringApplication.run(OpentrendsServiceApplication.class, args);
 	}
 
+	
 }
