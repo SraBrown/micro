@@ -10,3 +10,19 @@ spring:
       path: /h2-console
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+
+    spring:
+    mvc:
+      pathmatch:
+            matching-strategy: ant_path_matcher
+    
+    springfox:
+    documentation:
+    swaggerUi:
+      baseUrl: /documentation
+    openApi:
+      v3:
+        path: /documentation/v3/api-docs
+    swagger:
+      v2:
+        path: /documentation/v2/api-docs    
