@@ -14,4 +14,7 @@ target/
 *.war
 *.ear
 *.logs
-*.classes
+
+*.classpath
+*.project
+*.settings/
