@@ -13,8 +13,6 @@ docker run -p 8000:8080 opentrends-dockerfile
 Open Browser
 http://localhost:8000/swagger-ui/index.html#/
 
-BD H2
-http://localhost:8080/h2-console
 
 # Image 2 - Create Build
 
@@ -30,3 +28,7 @@ docker run -p 8000:8080 createbuild-dockerfile
 
 Open Browser
 http://localhost:8000/swagger-ui/index.html#/
+
+BD H2
+http://localhost:8080/h2-console
+
