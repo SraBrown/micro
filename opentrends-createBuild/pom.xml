@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.xm</groupId>
-	<artifactId>opentrends-service</artifactId>
+	<artifactId>opentrends-createBuild</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>opentrends-service</name>
-	<description>opentrends</description>
+	<name>opentrends-createBuild</name>
+	<description>opentrends-createBuild</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
