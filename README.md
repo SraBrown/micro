@@ -5,7 +5,7 @@ Search file dockfile
 Example: C:\Workspace\micro\opentrends-service>
 
 How you can create imagen
-docker build -t opentrends-dockerfile
+docker build -t opentrends-dockerfile .
 
 Run docker
 docker run -p 8000:8080 opentrends-dockerfile
@@ -23,7 +23,7 @@ Search file dockfile
 Example: C:\Workspace\micro\opentrends-createBuild>
 
 How you can create imagen
-docker build -t createbuild-dockerfile
+docker build -t createbuild-dockerfile .
 
 Run docker
 docker run -p 8000:8080 createbuild-dockerfile
