@@ -1,24 +1,31 @@
 package com.xm.opentrendsservice.service;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import org.gitlab4j.api.GitLabApi;
-import org.gitlab4j.api.GitLabApi.ApiVersion;
-import org.gitlab4j.api.ProjectApi;
-import org.gitlab4j.api.models.CommitAction;
-import org.gitlab4j.api.models.CommitAction.Action;
-import org.gitlab4j.api.models.Project;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.xm.opentrendsservice.dtos.BuildDto;
+import com.xm.opentrendsservice.models.Builds;
+import com.xm.opentrendsservice.repository.BuildRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
 public class OpentrendBuildService {
-
 	
+	@Autowired
+	private BuildRepository repoBuild;
+	
+	public void createBuild(BuildDto requestBuild) {
+		log.debug("OpentrendBuildService");
+		
+		Builds models=new Builds();
+		models.setName(requestBuild.getName());
+		models.setPathRepo(requestBuild.getPathRepo());
+		models.setVersion(requestBuild.getVersion());
+		repoBuild.save(models);
+		
+	}
+
 	
 }

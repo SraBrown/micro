@@ -36,11 +36,11 @@ public class OpentrendController {
 	
 	@PostMapping(value = "CreateBuild", consumes = "application/json", produces = "application/json")
 	@ResponseStatus(HttpStatus.CREATED)
-	private String CreateBuild(@Validated @RequestBody BuildDto requestPrice){
+	private String CreateBuild(@Validated @RequestBody BuildDto requestBuild){
 		
 		log.info("CreateBuild");
 		try {
-			
+			service.createBuild(requestBuild);
 		} catch (Exception e) {
 			throw new ResponseStatusException(
 			           HttpStatus.BAD_REQUEST, "Error en el request", e);

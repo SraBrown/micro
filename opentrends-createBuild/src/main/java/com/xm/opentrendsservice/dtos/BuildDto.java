@@ -11,9 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BuildDto {
 
-	private int buildId;
 	private String name;
 	private String pathRepo;
-	private int version;
+	private String version;
 	
 }
