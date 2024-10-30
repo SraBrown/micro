@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven Apache'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Replace with your repository URL and credentials if needed
+               git url: 'https://github.com/SraBrown/test_pipeline.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    // Check if Maven is installed and available
+                    if (!sh(script: 'mvn -v', returnStatus: true)) {
+                        error 'Maven is not installed.'
+                    }
+                }
+                // Compile the JAR using Maven
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Archive') {
+            steps {
+                // Archive the JAR file (adjust the path to your output file as necessary)
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build was successful!'
+        }
+        failure {
+            echo 'Build failed.'
+        }
+    }
+}
+
